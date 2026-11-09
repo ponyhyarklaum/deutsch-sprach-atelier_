@@ -1,0 +1,21 @@
+/* Tipografías locales (OFL). El build las incrusta en base64. */
+@font-face{font-family:'UnifrakturMaguntia';font-display:swap;src:url(../media/fonts/unifraktur-maguntia.woff2) format('woff2')}
+
+@font-face{font-family:'Tinos';font-style:normal;font-weight:400;font-display:swap;src:url(../media/fonts/tinos-400-normal.woff2) format('woff2')}
+
+@font-face{font-family:'Tinos';font-style:normal;font-weight:700;font-display:swap;src:url(../media/fonts/tinos-700-normal.woff2) format('woff2')}
+
+@font-face{font-family:'Tinos';font-style:italic;font-weight:400;font-display:swap;src:url(../media/fonts/tinos-400-italic.woff2) format('woff2')}
+
+@font-face{font-family:'Tinos';font-style:italic;font-weight:700;font-display:swap;src:url(../media/fonts/tinos-700-italic.woff2) format('woff2')}
+
+@font-face{font-family:'InterV';font-style:normal;font-weight:100 900;font-display:swap;src:url(../media/fonts/inter-variable.woff2) format('woff2')}
+
+
+/* Tipografías de rótulo por lengua (OFL):
+   EN · IM Fell English (tipos de John Fell, Oxford, s. XVII)
+   FR · Cormorant Garamond (familia Garamond, Renacimiento francés)
+   ES · Ibarra Real Nova (tipos de Joaquín Ibarra, Quijote de la RAE de 1780) */
+@font-face{font-family:'IM Fell English';font-style:normal;font-weight:400;font-display:swap;src:url(../media/fonts/im-fell-english-400.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:700;font-display:swap;src:url(../media/fonts/cormorant-garamond-700.woff2) format('woff2')}
+@font-face{font-family:'Ibarra Real Nova';font-style:normal;font-weight:700;font-display:swap;src:url(../media/fonts/ibarra-real-nova-700.woff2) format('woff2')}

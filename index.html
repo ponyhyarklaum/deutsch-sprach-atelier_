@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch · Atelier</title>
+<meta name="description" content="Aula gratuita de alemán, inglés, francés y español de A1 a C2: gramática con cuestionarios, conjugador, gramática contrastiva y recursos oficiales.">
+<link rel="icon" type="image/png" href="media/images/favicon-32.png">
+<link rel="apple-touch-icon" href="media/images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/lectura.css">
+<link rel="stylesheet" href="css/idiomas.css">
+<link rel="stylesheet" href="css/curso.css">
+</head>
+<body>
+<div class="app">
+<button class="sidetoggle" id="sideToggle" aria-label="Menú"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<div class="scrim" id="scrim"></div>
+<aside class="side" id="side">
+  <div class="sidehead">
+    <button class="brand" id="brandBtn" title="Volver al inicio"><img class="seal" src="media/images/sello.png" alt="" width="96" height="96"><span class="bt">Deutsch<span>im Allgemeinen Atelier</span></span></button>
+    <button class="sidecol" id="sideCollapse" title="Contraer la barra" aria-label="Contraer la barra"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+  </div>
+  <nav class="snav" id="snav"></nav>
+  <h2 id="pageTitle" class="sr">Inicio</h2>
+  <div class="subnav sr" id="subnav"></div>
+</aside>
+<main class="main">
+  <header class="topbar">
+    <div class="navbtns">
+      <button id="navBack" title="Atrás"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button id="navFwd" title="Adelante"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+    <div class="topttl" id="topTitle"></div>
+    <div class="toptools">
+      <button class="icobtn" id="btnTheme" title="Cambiar tema"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><span id="themeLbl">Tema claro</span></button>
+      <button class="icobtn" id="btnRandom" title="Ficha al azar"><svg viewBox="0 0 24 24"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Al azar</button>
+    </div>
+  </header>
+  <div class="content">
+
+<section id="m-home">
+  <h1 class="greet"><span class="de" id="greetDe">Willkommen</span><span id="greetEs">Bienvenido</span></h1>
+  <p class="greetsub">Un solo espacio para el alemán, de A1 a C2: itinerario lineal por niveles, léxico clasificado, morfología verbal descompuesta, teoría con evaluación inmediata, relatos con audio, inmersión audiovisual y simulacro de examen oficial.</p>
+  <div id="cont"></div>
+  <div id="homeRows"></div>
+  <div id="homeNiv" hidden></div>
+  <div id="secidx" hidden></div>
+  <div class="pickgrid" id="picks" hidden></div>
+  <div class="numbers" id="nums"></div>
+</section>
+
+<section id="m-dic" class="hide">
+  <div class="dicwrap">
+    <div id="dicHead"></div>
+    <div class="dicbar">
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="dicQ" placeholder="Escriba una palabra en alemán o en español…" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div id="dicExt"></div>
+    <div id="dicOut"></div>
+  </div>
+</section>
+
+<section id="m-gram" class="hide"><div id="gramOut"></div></section>
+
+<section id="m-hub" class="hide"><div id="hubOut"></div></section>
+
+<section id="m-wort" class="hide"><div id="wsOut"></div></section>
+
+<section id="m-satz" class="hide"><div id="sbOut"></div></section>
+
+<section id="m-kern" class="hide"><div id="knOut"></div></section>
+
+<section id="m-oest" class="hide"></section>
+
+<section id="m-schw" class="hide"></section>
+
+<section id="m-bib" class="hide"></section>
+
+<section id="m-stamm" class="hide"></section>
+
+<section id="m-lang" class="hide"></section>
+
+<section id="m-conj" class="hide"></section>
+
+<section id="m-contr" class="hide"></section>
+
+<section id="m-prac" class="hide"></section>
+
+<section id="m-curso" class="hide"></section>
+
+<section id="m-ling" class="hide"></section>
+
+<section id="m-refer" class="hide">
+  <div class="reftabs" id="refTabs">
+    <button data-r="sust" class="on">El sustantivo</button>
+    <button data-r="verbo">Morfología verbal</button>
+    <button data-r="pref">Prefijos</button>
+    <button data-r="teka">TEKAMOLO</button>
+  </div>
+  <div id="r-sust"><div class="doc" id="guiaOut"></div></div>
+  <div id="r-verbo" class="hide">
+  <div class="doc">
+    <div class="gcard" style="--c:var(--sg-e)">
+      <h2><span class="dot"></span>Cómo leer las tablas</h2>
+      <p>Dentro de cada ficha, toda forma verbal aparece descompuesta respecto del <b>infinitivo</b>. Lo que se conserva va en negro; lo que se añade o se transforma va subrayado en color:</p>
+      <div id="legendDoc"></div>
+      <table class="gtable">
+        <tr><th>Ejemplo</th><th>Lectura</th></tr>
+        <tr><td><span class="sg">mach<em class="e">te</em></span></td><td>la raíz <code>mach-</code> no se toca; solo se añade la marca de pretérito y la terminación</td></tr>
+        <tr><td><span class="sg">f<em class="r">ä</em>hr<em class="e">st</em></span></td><td>la raíz cambia de vocal (<code>a → ä</code>) y además lleva terminación</td></tr>
+        <tr><td><span class="sg"><em class="p">ge</em>spr<em class="r">o</em>ch<em class="e">en</em></span></td><td>prefijo del participio, cambio de vocal y terminación <code>-en</code></td></tr>
+        <tr><td><span class="sg"><em class="a">bin</em> … <em class="p">auf</em><em class="p">ge</em><em class="x">stand</em><em class="e">en</em></span></td><td>auxiliar conjugado, partícula separable, prefijo, raíz nueva y terminación</td></tr>
+      </table>
+      <p>Debajo de cada tabla hay una línea de <b>reglas</b> que resume las seis terminaciones, qué raíz usa cada persona y en qué consiste exactamente el cambio.</p>
+    </div>
+
+    <div class="gcard" style="--c:var(--brand)">
+      <h2><span class="dot"></span>Los tres tiempos de un vistazo</h2>
+      <p>Con estos tres tiempos ya se puede hablar del día a día completo. La diferencia entre los dos pasados no es de significado, sino de <b>situación de uso</b>.</p>
+      <table class="gtable">
+        <tr><th>Tiempo</th><th>Para qué sirve</th><th>Ejemplo</th></tr>
+        <tr><td>Präsens</td><td>Presente y también futuro cercano</td><td><code>Ich arbeite heute zu Hause.</code></td></tr>
+        <tr><td>Perfekt</td><td>El pasado que se <b>habla</b>: conversación, mensajes, día a día</td><td><code>Ich habe gestern zu Hause gearbeitet.</code></td></tr>
+        <tr><td>Präteritum</td><td>El pasado que se <b>escribe</b>: relatos, noticias, libros</td><td><code>Er arbeitete den ganzen Tag.</code></td></tr>
+      </table>
+      <div class="tips">
+        <div class="tip" style="--c:var(--c-mod)"><b>Regla práctica</b><span>Si habla, use el Perfekt. Si escribe una historia, el Präteritum.</span></div>
+        <div class="tip" style="--c:var(--c-str)"><b>Excepciones</b><span><code>sein, haben</code> y los modales se dicen en Präteritum incluso al hablar: <code>ich war</code>, <code>ich hatte</code>, <code>ich konnte</code>.</span></div>
+      </div>
+    </div>
+
+    <div class="gcard" style="--c:var(--c-reg)">
+      <h2><span class="dot"></span>Verbos regulares (débiles)</h2>
+      <p>La raíz nunca cambia. Basta con añadir terminaciones; es el grupo más numeroso y el más predecible.</p>
+      <table class="gtable">
+        <tr><th></th><th>Präsens</th><th>Präteritum</th><th>Participio</th></tr>
+        <tr><td>machen</td><td><code>ich mache, du machst, er macht</code></td><td><code>ich machte</code></td><td><code>gemacht</code></td></tr>
+      </table>
+      <h3>Dos ajustes de pronunciación</h3>
+      <p>Si la raíz termina en <b>-t, -d, -n</b> tras consonante, se inserta una <b>-e-</b> para poder pronunciarla: <code>du arbeitest</code>, <code>er öffnet</code>.</p>
+      <p>Si la raíz termina en <b>-s, -ß, -z, -tz</b>, la forma de <i>du</i> pierde la <i>-s-</i> y suena igual que la de <i>er</i>: <code>du heißt</code>, <code>du putzt</code>.</p>
+    </div>
+
+    <div class="gcard" style="--c:var(--c-str)">
+      <h2><span class="dot"></span>Verbos irregulares (fuertes)</h2>
+      <p>Cambian la vocal de la raíz. Hay que memorizarlos, pero solo tres formas por verbo: <b>infinitivo — pretérito — participio</b>. En este material aparecen siempre juntas debajo de cada verbo.</p>
+      <table class="gtable">
+        <tr><th>Infinitivo</th><th>Pretérito</th><th>Participio</th></tr>
+        <tr><td>sprechen</td><td><code>sprach</code></td><td><code>gesprochen</code></td></tr>
+        <tr><td>fahren</td><td><code>fuhr</code></td><td><code>gefahren</code></td></tr>
+      </table>
+      <h3>Ojo con <i>du</i> y <i>er</i> en presente</h3>
+      <p>Muchos irregulares cambian la vocal <b>solo</b> en esas dos personas; el resto se conjuga con normalidad. En las tablas de este documento aparecen marcadas en rojo.</p>
+      <div class="tips">
+        <div class="tip" style="--c:var(--c-str)"><b>e → i / ie</b><span>sprechen → du <b>sprichst</b> · lesen → du <b>liest</b> · nehmen → du <b>nimmst</b></span></div>
+        <div class="tip" style="--c:var(--c-str)"><b>a → ä</b><span>fahren → du <b>fährst</b> · schlafen → du <b>schläfst</b> · tragen → du <b>trägst</b></span></div>
+      </div>
+    </div>
+
+    <div class="gcard" style="--c:var(--c-aux)">
+      <h2><span class="dot"></span>¿<i>haben</i> o <i>sein</i> en el perfecto?</h2>
+      <p>El participio siempre es el mismo; lo único que cambia es el auxiliar. En cada ficha de verbo está indicado con una etiqueta.</p>
+      <div class="tips">
+        <div class="tip" style="--c:var(--c-aux)"><b>sein</b><span>Movimiento de un sitio a otro (<i>gehen, kommen, fahren, laufen</i>), cambio de estado (<i>werden, aufstehen</i>) y los tres irregulares <i>sein, bleiben, passieren</i>.</span></div>
+        <div class="tip" style="--c:var(--brand)"><b>haben</b><span>Todo lo demás, y siempre que haya complemento directo: <code>Ich habe das Auto gefahren.</code></span></div>
+      </div>
+      <h3>Dónde va el participio</h3>
+      <p>El auxiliar ocupa el segundo lugar y el participio se va al final de la frase; entre ambos va toda la información. Es la llamada <b>estructura de paréntesis</b>:</p>
+      <p><code>Ich <b>habe</b> gestern mit meiner Chefin <b>gesprochen</b>.</code></p>
+    </div>
+
+    <div class="gcard" style="--c:var(--c-sep)">
+      <h2><span class="dot"></span>Verbos separables</h2>
+      <p>Llevan un prefijo con acento propio (<i>auf-, an-, ein-, mit-, fern-</i>) que se despega del verbo y se va al final de la frase.</p>
+      <p><code>Ich <b>stehe</b> jeden Tag um sechs <b>auf</b>.</code> — el prefijo cierra la frase.</p>
+      <p>En el participio, el prefijo se queda delante y el <b>-ge-</b> se cuela en medio: <code>auf<b>ge</b>standen</code>, <code>ein<b>ge</b>kauft</code>.</p>
+      <h3>No confundir con los inseparables</h3>
+      <p>Los prefijos átonos <i>be-, ver-, ent-, er-</i> no se separan nunca y su participio <b>no lleva ge-</b>: <code>vergessen → vergessen</code>, <code>verstehen → verstanden</code>.</p>
+    </div>
+
+    <div class="gcard" style="--c:var(--c-mod)">
+      <h2><span class="dot"></span>Verbos modales</h2>
+      <p>Acompañan a otro verbo, que va en infinitivo al final de la frase: <code>Ich <b>muss</b> um sechs <b>aufstehen</b>.</code></p>
+      <p>En singular pierden el Umlaut y las formas de <i>ich</i> y <i>er</i> son idénticas y sin terminación: <code>ich kann / er kann</code>.</p>
+      <table class="gtable">
+        <tr><th>Verbo</th><th>Significado</th><th>Ejemplo</th></tr>
+        <tr><td>können</td><td>capacidad, «saber / poder»</td><td><code>Ich kann schwimmen.</code></td></tr>
+        <tr><td>müssen</td><td>necesidad, «tener que»</td><td><code>Ich muss arbeiten.</code></td></tr>
+        <tr><td>wollen</td><td>voluntad firme, «querer»</td><td><code>Ich will schlafen.</code></td></tr>
+        <tr><td>dürfen</td><td>permiso, «poder / estar permitido»</td><td><code>Man darf hier parken.</code></td></tr>
+        <tr><td>sollen</td><td>encargo ajeno, «deber»</td><td><code>Ich soll Wasser trinken.</code></td></tr>
+        <tr><td>mögen</td><td>gusto, «gustar»; <i>möchten</i> = «querría»</td><td><code>Ich möchte einen Kaffee.</code></td></tr>
+      </table>
+      <div class="tips">
+        <div class="tip" style="--c:var(--c-mod)"><b>En pasado, mejor el Präteritum</b><span><code>ich konnte, ich musste, ich wollte</code>. El perfecto de los modales existe pero casi no se usa al hablar.</span></div>
+        <div class="tip" style="--c:var(--c-str)"><b>nicht müssen ≠ prohibido</b><span><code>Du musst nicht kommen</code> = no hace falta. Para prohibir: <code>Du darfst nicht kommen</code>.</span></div>
+      </div>
+    </div>
+  </div></div>
+  <div id="r-pref" class="hide"><div id="prefOut"></div><div id="r-pref2" style="margin-top:26px"></div></div>
+  <div id="r-teka" class="hide"><div id="tekaOut"></div></div>
+</section>
+
+<section id="m-stories" class="hide"><div id="stOut"></div></section>
+
+<section id="m-nivel" class="hide"><div id="nvOut"></div></section>
+
+<section id="m-immers" class="hide"><div id="immOut"></div></section>
+
+<section id="m-examen" class="hide"><div id="exOut"></div></section>
+
+<section id="m-puzzle" class="hide">
+  <div class="pzwrap">
+    <div class="pzhead">
+      <div>
+        <div class="pzes" id="pzEs">—</div>
+        <div class="pzhint" id="pzHint">Paso 1: coloque las piezas en el orden correcto.</div>
+      </div>
+      <div class="pzmeta">
+        <span class="pill2" id="pzNum">1 / 24</span>
+        <span class="pill2" id="pzScore">0 resueltas</span>
+        <button class="btn" id="pzSkip">Otra frase</button>
+      </div>
+    </div>
+    <div class="pzsteps" id="pzSteps">
+      <button data-s="1" class="on"><b>1</b> Ordenar la oración</button>
+      <button data-s="2" disabled><b>2</b> Anclar las funciones</button>
+    </div>
+    <div id="pzS1">
+      <div class="pzline" id="pzLine"></div>
+      <div class="pztray" id="pzTray"></div>
+      <div class="pzbtns">
+        <button class="btn pri" id="pzCheck1">Comprobar el orden</button>
+        <button class="btn" id="pzClear">Vaciar</button>
+        <button class="btn" id="pzSol1">Ver el orden correcto</button>
+      </div>
+    </div>
+    <div id="pzS2" class="hide">
+      <div class="pzboard" id="pzBoard"></div>
+      <div class="pzchips" id="pzChips"></div>
+      <div class="pzbtns">
+        <button class="btn pri" id="pzCheck2">Comprobar las funciones</button>
+        <button class="btn" id="pzClear2">Vaciar</button>
+        <button class="btn" id="pzSol2">Ver las funciones</button>
+      </div>
+    </div>
+    <div class="pzfb" id="pzFb"></div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- ============ LISTA ============ -->
+<section id="m-lista">
+  <div class="stats" id="stats"></div>
+  <div class="toolbar">
+    <div class="search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="q" placeholder="Buscar verbo, significado o participio…" autocomplete="off" spellcheck="false">
+      <kbd>/</kbd>
+    </div>
+    <select class="vsel" id="qniv">
+      <option value="">Todos los niveles</option>
+      <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+      <option value="B2">B2</option><option value="C1">C1</option>
+    </select>
+    <div class="chips" id="chips"></div>
+    <label class="switch"><input type="checkbox" id="tgGroup"> Agrupar por tipo</label>
+    <span class="cnt" id="cnt"></span>
+  </div>
+  <div id="listOut"></div>
+</section>
+
+<!-- ============ PRÁCTICA ============ -->
+<section id="m-practica" class="hide">
+  <div class="pwrap">
+    <div class="psetup" id="pTenses">
+      <button class="pill on" data-t="0">Presente</button>
+      <button class="pill on" data-t="1">Pretérito</button>
+      <button class="pill on" data-t="2">Perfecto</button>
+      <button class="pill" data-t="3">Pluscuamperfecto</button>
+      <button class="pill" data-t="4">Futuro I</button>
+      <button class="pill" data-t="5">Konjunktiv II</button>
+      <button class="pill" data-t="6">Imperativo</button>
+    </div>
+    <div class="psetup" id="pKinds">
+      <button class="pill on" data-k="all">Todos los verbos</button>
+      <button class="pill" data-k="reg">Solo regulares</button>
+      <button class="pill" data-k="str">Solo irregulares</button>
+      <button class="pill" data-k="mod">Solo modales</button>
+      <button class="pill" data-k="fav">Mis favoritos</button>
+    </div>
+    <div class="scoreboard">
+      <div class="sb"><div class="n" id="sAcc">—</div><div class="l">Aciertos</div></div>
+      <div class="sb"><div class="n" id="sStreak">0</div><div class="l">Racha</div></div>
+      <div class="sb"><div class="n" id="sTot">0</div><div class="l">Respuestas</div></div>
+    </div>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="qcard" id="qcard">
+      <div class="qk" id="qKick"></div>
+      <div class="qinf" id="qInf">—</div>
+      <div class="qtr" id="qTr"></div>
+      <div class="qask" id="qAsk"></div>
+      <form class="qf" id="qForm" autocomplete="off">
+        <input type="text" id="qIn" placeholder="escriba la forma…" spellcheck="false" autocapitalize="off">
+        <button type="submit" id="qBtn">Comprobar</button>
+      </form>
+      <div class="qtools">
+        <button class="lnk" id="btnHint" type="button">Pista</button>
+        <button class="lnk" id="btnSkip" type="button">Saltar</button>
+        <button class="lnk" id="btnReset" type="button">Reiniciar marcador</button>
+      </div>
+      <div class="fb" id="fb"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GRAMÁTICA ============ -->
+
+
+<section id="m-vocab" class="hide">
+
+  <div id="v-explorar">
+    <div class="vtools">
+      <div class="search" style="flex:1 1 280px">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="vq" placeholder="Buscar palabra alemana o española…" autocomplete="off" spellcheck="false">
+      </div>
+      <select class="vsel" id="vniv">
+        <option value="">Todos los niveles</option>
+        <option value="A1">A1</option><option value="A2">A2</option><option value="B1">B1</option>
+        <option value="B2">B2</option><option value="C1">C1</option><option value="C2">C2</option>
+      </select>
+      <select class="vsel" id="vcls">
+        <option value="">Todas las clases</option>
+        <option value="s">Sustantivos</option>
+        <option value="v">Verbos</option>
+        <option value="a">Adjetivos</option>
+        <option value="d">Adverbios</option>
+        <option value="p">Palabras de función</option>
+        <option value="f">Frases</option>
+        <option value="z">Números</option>
+      </select>
+      <select class="vsel" id="vgen">
+        <option value="">Todos los géneros</option>
+        <option value="m">der (masculino)</option>
+        <option value="f">die (femenino)</option>
+        <option value="n">das (neutro)</option>
+      </select>
+      <select class="vsel" id="vord">
+        <option value="az">Orden alfabético</option>
+        <option value="niv">Por nivel</option>
+        <option value="dif">Por dificultad</option>
+        <option value="len">Por longitud</option>
+      </select>
+      <span class="cnt" id="vcnt"></span>
+    </div>
+    <div id="vout"></div>
+  </div>
+
+  <div id="v-tarjetas" class="hide">
+    <div class="fcwrap">
+      <div class="psetup" id="fcScope"></div>
+      <div class="psetup">
+        <button class="pill on" id="fcDir" data-dir="es">Español → Alemán</button>
+        <button class="pill" id="fcDir2" data-dir="de">Alemán → Español</button>
+      </div>
+      <div class="vstats">
+        <div class="sb"><div class="n" id="fcSeen">0</div><div class="l">Vistas</div></div>
+        <div class="sb"><div class="n" id="fcKnown">0</div><div class="l">Sabidas</div></div>
+        <div class="sb"><div class="n" id="fcLeft">0</div><div class="l">Pendientes</div></div>
+      </div>
+      <div class="fc" id="fc"><div class="fcin">
+        <div class="fcface front" id="fcFront"></div>
+        <div class="fcface back" id="fcBack"></div>
+      </div></div>
+      <div class="fcbtns">
+        <button class="b1" data-q="0">No la sé</button>
+        <button class="b2" data-q="1">Dudosa</button>
+        <button class="b3" data-q="2">La sé</button>
+      </div>
+      <p style="text-align:center;font-size:.76rem;color:var(--ink3);margin-top:12px">Pulse la tarjeta o la barra espaciadora para girarla. Las dudosas vuelven a aparecer.</p>
+    </div>
+  </div>
+
+  <div id="v-escribir" class="hide">
+    <div class="pwrap">
+      <div class="psetup" id="wrScope"></div>
+      <div class="vstats">
+        <div class="sb"><div class="n" id="wrAcc">—</div><div class="l">Aciertos</div></div>
+        <div class="sb"><div class="n" id="wrStreak">0</div><div class="l">Racha</div></div>
+        <div class="sb"><div class="n" id="wrTot">0</div><div class="l">Intentos</div></div>
+        <div class="sb"><div class="n" id="wrLearn">0</div><div class="l">Dominadas</div></div>
+      </div>
+      <div class="qcard" id="wrCard">
+        <div class="qk" id="wrKick"></div>
+        <div class="qinf" id="wrEs">—</div>
+        <div class="qtr" id="wrDef"></div>
+        <div class="qask">se traduce al alemán:</div>
+        <div class="artsel" id="wrArt"></div>
+        <div class="boxes" id="wrBoxes"></div>
+        <input class="ghost" id="wrIn" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <div class="umls" id="wrUml"></div>
+        <div class="qtools">
+          <button class="lnk" id="wrCheck" type="button">Controlar</button>
+          <button class="lnk" id="wrHint" type="button">Pista</button>
+          <button class="lnk" id="wrSkip" type="button">Saltar</button>
+          <button class="lnk" id="wrFicha" type="button">Ver ficha</button>
+        </div>
+        <div class="fb" id="wrFb"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="v-genero" class="hide">
+    <div class="pwrap">
+      <div class="vstats">
+        <div class="sb"><div class="n" id="gAcc">—</div><div class="l">Aciertos</div></div>
+        <div class="sb"><div class="n" id="gStreak">0</div><div class="l">Racha</div></div>
+        <div class="sb"><div class="n" id="gTot">0</div><div class="l">Intentos</div></div>
+      </div>
+      <div class="qcard" id="gCard">
+        <div class="qk" id="gKick"></div>
+        <div class="qinf" id="gWord">—</div>
+        <div class="qtr" id="gEs"></div>
+        <div class="qask">¿qué artículo lleva?</div>
+        <div class="artsel" id="gArt" style="margin-top:14px">
+          <button data-g="m" style="padding:12px 26px;font-size:1.05rem">der</button>
+          <button data-g="f" style="padding:12px 26px;font-size:1.05rem">die</button>
+          <button data-g="n" style="padding:12px 26px;font-size:1.05rem">das</button>
+        </div>
+        <div class="qtools"><button class="lnk" id="gNext" type="button">Siguiente</button></div>
+        <div class="fb" id="gFb"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<dialog id="vdlg" class="vficha">
+  <div class="dh" id="vdh">
+    <div class="kicker" id="vKick"></div>
+    <h2 id="vTitle"></h2>
+    <div class="tr" id="vTr"></div>
+    <div class="nav">
+      <button id="vPrev" title="Anterior"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button id="vNext" title="Siguiente"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+      <button id="vClose" title="Cerrar"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="db" id="vBody"></div>
+</dialog>
+
+<footer>
+  <span id="footStats">Formas conforme a la norma del alemán estándar y la ortografía vigente.</span>
+  <span>Atajos: <kbd>/</kbd> buscar · <kbd>Esc</kbd> cerrar ficha · <kbd>←</kbd> <kbd>→</kbd> navegar · <kbd>espacio</kbd> girar tarjeta</span>
+</footer>
+  </div></main></div>
+
+<dialog id="dlg">
+  <div class="dh" id="dh">
+    <div class="kicker" id="dKick"></div>
+    <h2 id="dInf"></h2>
+    <div class="tr" id="dTr"></div>
+    <div class="nav">
+      <button id="dPrev" title="Anterior"><svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg></button>
+      <button id="dNext" title="Siguiente"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></button>
+      <button id="dClose" title="Cerrar"><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+  </div>
+  <div class="db" id="dBody"></div>
+</dialog>
+<script src="data/verbos.js"></script>
+<script src="data/irregulares.js"></script>
+<script src="data/lexico.js"></script>
+<script src="data/gramatica.js"></script>
+<script src="data/relatos.js"></script>
+<script src="data/sintaxis.js"></script>
+<script src="data/examenes.js"></script>
+<script src="data/curriculo.js"></script>
+<script src="data/en.js"></script>
+<script src="data/fr.js"></script>
+<script src="data/es.js"></script>
+<script src="data/tiempos.js"></script>
+<script src="data/contraste.js"></script>
+<script src="data/lecturas.js"></script>
+<script src="data/linguistica.js"></script>
+<script src="data/cultura.js"></script>
+<script src="data/paises.js"></script>
+<script src="data/lingcurso.js"></script>
+<script src="js/app.js"></script>
+<script src="js/performance.js"></script>
+<script src="modules/oesterreich.js"></script>
+<script src="modules/schweiz.js"></script>
+<script src="modules/bibliografia.js"></script>
+<script src="modules/stammformen.js"></script>
+<script src="modules/legal.js"></script>
+<script src="modules/cuenta.js"></script>
+<script src="modules/conjugador.js"></script>
+<script src="modules/practica.js"></script>
+<script src="modules/curso.js"></script>
+<script src="modules/linguistica.js"></script>
+<script src="modules/idiomas.js"></script>
+<script src="modules/anuncios.js" data-web></script>
+<script src="modules/lectura.js"></script>
+<script src="modules/interfaz.js"></script>
+<script src="modules/bombillo.js"></script>
+<script src="modules/azar.js"></script>
+<script src="js/scorm.js"></script>
+</body>
+</html>

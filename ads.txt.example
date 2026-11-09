@@ -1,0 +1,5 @@
+# Plantilla de ads.txt para Google AdSense.
+# 1. Sustituya pub-0000000000000000 por su ID de editor (AdSense › Cuenta › Información de la cuenta).
+# 2. Guarde el archivo como «ads.txt» en la raíz del dominio: https://su-dominio/ads.txt
+# f08c47fec0942fa0 es el identificador de Google en el registro TAG; no lo cambie.
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

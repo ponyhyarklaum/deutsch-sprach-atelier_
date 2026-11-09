@@ -1,0 +1,82 @@
+/* =====================================================================
+   VARIACIÓN POR PAÍS · detalle de cada país en «¿Sabías que…?»
+   PAIS[lengua][país] = {cab:[columna local, referencia], voc:[[local, referencia, español]],
+                         ras:[aspectos de cambio], ir:[destino interno, texto] (opcional)}
+   Referencias: alemán de Alemania, inglés británico, francés de Francia,
+   español peninsular (solo como punto de comparación, no como norma superior).
+   ===================================================================== */
+const PAIS={
+de:{
+ 'Alemania':{cab:['Norte','Sur'],voc:[['Brötchen','Semmel','panecillo'],['Sonnabend','Samstag','sábado'],['Moin','Grüß Gott','saludo'],['Schlachter','Metzger','carnicero'],['Treppe','Stiege','escalera']],
+  ras:['«König» termina en [ç] en la norma del norte ([ˈkøːnɪç]) y en [k] en el sur ([ˈkøːnɪk]).','El Präteritum es más frecuente en el norte; en el sur se usa casi siempre el Perfekt en la conversación.','Sur: «ich bin gestanden / gesessen» con sein; norte: «ich habe gestanden».','Diminutivo -chen en el norte; -le, -la o -erl en el sur (Häusle, Häuserl).']},
+ 'Austria':{cab:['Austria','Alemania'],voc:[['Jänner','Januar','enero'],['Paradeiser','Tomate','tomate'],['Erdäpfel','Kartoffeln','patatas'],['Marille','Aprikose','albaricoque'],['Topfen','Quark','requesón'],['Sackerl','Tüte','bolsa'],['Servus','Hallo / Tschüss','hola / adiós']],
+  ras:['Estándar nacional propio (österreichisches Deutsch), recogido en el Österreichisches Wörterbuch.','Perfekt con sein en verbos de posición: «ich bin gesessen».','Uso de títulos académicos y profesionales en el trato (Frau Magistra, Herr Doktor).','Diminutivo -erl (Sackerl, Busserl) y la /s/ inicial sorda.'],ir:['oest','Abrir la sección Österreich']},
+ 'Suiza':{cab:['Suiza','Alemania'],voc:[['Velo','Fahrrad','bicicleta'],['Trottoir','Bürgersteig','acera'],['parkieren','parken','aparcar'],['grillieren','grillen','asar a la parrilla'],['Znüni','Pausensnack','tentempié de media mañana'],['Natel','Handy','móvil'],['Grüezi','Guten Tag','buenos días']],
+  ras:['No se usa la ß: se escribe ss (Strasse).','Diglosia: dialecto (Schweizerdeutsch) en casi toda la comunicación oral; estándar suizo en la escritura.','Préstamos del francés y verbos en -ieren (parkieren, grillieren).','El acento léxico tiende a la primera sílaba en préstamos (Büro, Billett).'],ir:['schw','Abrir la sección Schweiz']},
+ 'Liechtenstein':{cab:['Liechtenstein','Alemania'],voc:[['Velo','Fahrrad','bicicleta'],['Grüezi / Hoi','Hallo','hola'],['Znüni','Pausensnack','tentempié']],
+  ras:['Comparte con Suiza la ortografía sin ß.','Dialectos alemánicos en lo oral y alemán estándar en lo escrito, como en el este de Suiza.','Muchos helvetismos léxicos por la unión aduanera y monetaria con Suiza.']},
+ 'Luxemburgo':{cab:['Luxemburgués','Alemán estándar'],voc:[['Moien','Guten Morgen / Hallo','hola'],['Äddi','Tschüss','adiós'],['Merci','Danke','gracias']],
+  ras:['El alemán es una de las tres lenguas administrativas, junto al francés y al luxemburgués.','La alfabetización escolar comienza en alemán; la prensa escrita usa mucho el alemán.','El luxemburgués, lengua propia de base germánica, es la lengua de identidad y de la vida diaria.']},
+ 'Bélgica':{cab:['Bélgica (Ostbelgien)','Alemania'],voc:[['GSM','Handy','móvil'],['Athenäum','Gymnasium','instituto público de secundaria']],
+  ras:['Comunidad germanófona en torno a Eupen y Sankt Vith, con su propio parlamento y gobierno.','Influencia del francés en vocabulario administrativo y préstamos de uso diario.','Escolarización en alemán con fuerte presencia del francés como segunda lengua.']},
+ 'Italia':{cab:['Tirol del Sur','Alemania'],voc:[['Matura','Abitur','examen de fin de bachillerato'],['Kondominium','Eigentümergemeinschaft','comunidad de propietarios'],['Targa','Kennzeichen','matrícula del coche'],['Bar','Café / Kneipe','bar']],
+  ras:['Cooficialidad con el italiano y, en algunos valles, con el ladino.','Dialectos bávaro-tiroleses en lo oral, próximos a los de Austria.','Préstamos y calcos del italiano en la administración y la vida diaria.']},
+ 'Namibia':{cab:['Namdeutsch','Alemania'],voc:[['Pad','Straße / Piste','carretera, pista'],['Rivier','Flussbett','lecho de río seco'],['Braai','Grillfest','asado'],['lekker','lecker / toll','rico, estupendo']],
+  ras:['Variedad hablada por una minoría desde la época colonial, con diario propio (Allgemeine Zeitung).','Préstamos del afrikáans y del inglés, y alternancia de lenguas en la conversación.','Se enseña como lengua materna en algunas escuelas.']}
+},
+en:{
+ 'Reino Unido':{cab:['Reino Unido','EE. UU.'],voc:[['flat','apartment','piso'],['lift','elevator','ascensor'],['biscuit','cookie','galleta'],['queue','line','cola'],['pavement','sidewalk','acera']],
+  ras:['La pronunciación de referencia (RP) no es rótica: car [kɑː].','Gran variedad regional: Escocia, Gales, Irlanda del Norte, Liverpool (Scouse), Newcastle (Geordie).','Ortografía -our, -re, -ise (colour, centre, organise).','Uso de «have got» y del present perfect con just, already, yet.']},
+ 'Estados Unidos':{cab:['EE. UU.','Reino Unido'],voc:[['apartment','flat','piso'],['fall','autumn','otoño'],['truck','lorry','camión'],['gas','petrol','gasolina'],['vacation','holiday','vacaciones']],
+  ras:['Pronunciación rótica y «flap» intervocálico: water [ˈwɑːɾɚ].','Ortografía de Webster: color, center, traveled.','Past simple con just, already, yet (Did you eat yet?).','Variedades como el AAVE, con aspecto habitual (She be working).']},
+ 'Canadá':{cab:['Canadá','EE. UU.'],voc:[['toque','beanie','gorro de lana'],['washroom','restroom','aseo'],['loonie','one-dollar coin','moneda de un dólar'],['double-double','coffee with two creams and two sugars','café con doble crema y azúcar']],
+  ras:['Ortografía mixta: colour y centre (británicas) con -ize (americana).','«Canadian raising»: diptongos de about y price más cerrados ante consonante sorda.','La partícula «eh» al final de la frase.','Bilingüismo oficial con el francés.']},
+ 'Australia y Nueva Zelanda':{cab:['Australia','Reino Unido'],voc:[['arvo','afternoon','tarde'],['servo','petrol station','gasolinera'],['ute','pickup truck','camioneta'],['thongs','flip-flops','chanclas'],['brekkie','breakfast','desayuno']],
+  ras:['Abundantes diminutivos en -o y -ie (arvo, barbie).','Entonación ascendente en enunciados afirmativos.','Vocales distintas en Nueva Zelanda: fish suena cercano a «fush».','Préstamos de lenguas aborígenes y maoríes (kangaroo; kia ora como saludo en Nueva Zelanda).']},
+ 'Irlanda':{cab:['Irlanda','Reino Unido'],voc:[['craic','fun / news','diversión, ambiente'],['press','cupboard','armario'],['grand','fine','bien'],['yoke','thing','chisme, cosa']],
+  ras:['Perfecto «after»: I\'m after eating (acabo de comer), calco del irlandés.','Pronunciación rótica y «th» como [t] o [d] en muchas zonas.','Segunda persona plural ye o yous.','El irlandés (gaélico) es lengua oficial junto al inglés.']},
+ 'India':{cab:['India','Reino Unido'],voc:[['prepone','bring forward','adelantar (una cita)'],['lakh','one hundred thousand','cien mil'],['crore','ten million','diez millones'],['timepass','pastime','pasatiempo'],['do the needful','do what is necessary','hacer lo necesario']],
+  ras:['Lengua oficial asociada, de la administración, la universidad y la empresa.','Uso del progresivo con verbos de estado (I am knowing).','Preguntas confirmativas con «isn\'t it?» invariable.','Pronunciación sin aspiración y con consonantes retroflejas.']},
+ 'Nigeria, Ghana, Kenia, Sudáfrica':{cab:['Variedad','Reino Unido'],voc:[['robot (Sudáfrica)','traffic light','semáforo'],['now-now (Sudáfrica)','in a moment','enseguida'],['go-slow (Nigeria)','traffic jam','atasco'],['flash (Nigeria)','missed call','perdida (llamada)']],
+  ras:['Inglés como lengua oficial y de enseñanza en sociedades multilingües.','Contacto con yoruba, igbo, hausa, suajili, afrikáans o zulú.','Pidgin nigeriano como lengua franca muy extendida.']},
+ 'Singapur, Filipinas, Malta':{cab:['Variedad','Reino Unido'],voc:[['chope (Singapur)','reserve a seat','reservar un sitio'],['shiok (Singapur)','great','genial'],['comfort room (Filipinas)','toilet','aseo'],['load (Filipinas)','phone credit','saldo del móvil']],
+  ras:['El «Singlish» de Singapur mezcla inglés con malayo, hokkien y tamil, y usa partículas como «lah».','En Filipinas convive con el tagalo (filipino) y forma el «Taglish».','En Malta es cooficial con el maltés.']}
+},
+fr:{
+ 'Francia':{cab:['Francia','Quebec'],voc:[['petit-déjeuner','déjeuner','desayuno'],['déjeuner','dîner','almuerzo'],['dîner','souper','cena'],['week-end','fin de semaine','fin de semana'],['faire du shopping','magasiner','ir de compras']],
+  ras:['Norma de referencia tradicional, centralizada en París y la Académie française.','Caída frecuente del «ne» en la negación oral.','Variación meridional: e muda pronunciada y nasales más abiertas en el sur.']},
+ 'Bélgica':{cab:['Bélgica','Francia'],voc:[['septante','soixante-dix','setenta'],['nonante','quatre-vingt-dix','noventa'],['GSM','portable','móvil'],['kot','chambre d\'étudiant','habitación de estudiante'],['à tantôt','à tout à l\'heure','hasta luego']],
+  ras:['Uso de «savoir» por «pouvoir» en algunas construcciones (je ne sais pas venir).','Préstamos del neerlandés y del valón.','Pronunciación de la w como [w] (wagon).']},
+ 'Suiza':{cab:['Suiza','Francia'],voc:[['septante','soixante-dix','setenta'],['huitante (Vaud, Valais, Friburgo)','quatre-vingts','ochenta'],['nonante','quatre-vingt-dix','noventa'],['natel','portable','móvil'],['panosse','serpillière','fregona'],['souper','dîner','cena']],
+  ras:['Ritmo más lento y alargamiento vocálico en algunas regiones.','Préstamos del alemán (poutzer, limpiar).','Comidas como en Quebec y Bélgica: déjeuner, dîner, souper.']},
+ 'Canadá':{cab:['Quebec','Francia'],voc:[['char (coloquial)','voiture','coche'],['magasiner','faire du shopping','ir de compras'],['courriel','e-mail','correo electrónico'],['blonde','petite amie','novia'],['dépanneur','supérette','tienda de barrio']],
+  ras:['Africación ante i, u: tu [tsy], dire [dzir].','Política lingüística activa (Ley 101) y terminología propia frente a los anglicismos.','Partícula interrogativa -tu (tu viens-tu ?) en el habla informal.','Diptongación de vocales largas (père [paɛ̯ʁ]).']},
+ 'Luxemburgo y Mónaco':{cab:['Lengua','Uso'],voc:[['luxemburgués','lengua nacional e identitaria'],['francés','legislación y administración'],['alemán','prensa y alfabetización']],
+  ras:['En Luxemburgo, el francés es lengua de la legislación y de buena parte de la administración.','En Mónaco es la única lengua oficial; el monegasco se conserva como lengua patrimonial.']},
+ 'Senegal, Costa de Marfil, Malí…':{cab:['África occidental','Francia'],voc:[['essencerie (Senegal)','station-service','gasolinera'],['dibiterie (Senegal)','grill','parrilla de carne'],['maquis (Costa de Marfil)','restaurant populaire','restaurante popular'],['gbaka (Costa de Marfil)','minibus','microbús'],['cadeauter','offrir un cadeau','regalar']],
+  ras:['El francés es lengua oficial o de enseñanza junto a lenguas africanas (wolof, bambara, diulá).','En Costa de Marfil, el «nouchi» es una variedad juvenil muy creativa.','Neologismos por derivación (cadeauter, enceinter).']},
+ 'R. D. del Congo':{cab:['Congo','Francia'],voc:[['matabiche','pourboire','propina'],['ambianceur','fêtard','persona alegre, que anima'],['deuxième bureau','maîtresse','amante']],
+  ras:['Uno de los países con más hablantes de francés del mundo, sobre todo en Kinsasa.','Contacto con lingala, suajili, kikongo y tshiluba.']},
+ 'Haití':{cab:['Criollo haitiano','Francés'],voc:[['bonjou','bonjour','buenos días'],['mèsi','merci','gracias'],['zanmi','ami','amigo'],['manje','manger','comer']],
+  ras:['El criollo haitiano (kreyòl), de base léxica francesa, es la lengua de casi toda la población; el francés es lengua oficial y de prestigio.','El criollo tiene gramática propia: marcas preverbales de tiempo y aspecto (mwen te manje, comí).']}
+},
+es:{
+ 'España':{cab:['España','América (general)'],voc:[['coche','carro / auto','coche'],['ordenador','computadora','ordenador'],['zumo','jugo','zumo'],['móvil','celular','móvil'],['vale','listo / dale / órale','de acuerdo']],
+  ras:['Distinción /θ/–/s/ en el centro y norte (casa / caza); seseo o ceceo en Andalucía y Canarias.','Uso de vosotros y del perfecto compuesto para lo ocurrido hoy (he comido).','Leísmo de persona admitido (a Juan le vi).']},
+ 'México':{cab:['México','España'],voc:[['carro','coche','coche'],['popote','pajita','pajita'],['camión','autobús','autobús'],['chamba','curro','trabajo (coloquial)'],['ahorita','ahora mismo','enseguida']],
+  ras:['Seseo y conservación de las consonantes finales.','Abundantes préstamos del náhuatl (aguacate, chocolate, cuate).','Diminutivos muy frecuentes, también con valor de cortesía (ahorita, un cafecito).']},
+ 'Colombia':{cab:['Colombia','España'],voc:[['tinto','café solo','café negro'],['carro','coche','coche'],['computador','ordenador','ordenador'],['parce (coloquial)','tío / colega','amigo'],['bacano','guay','estupendo']],
+  ras:['Usted muy extendido incluso entre familiares y amigos (sobre todo en el altiplano).','Voseo en Antioquia y el Valle del Cauca.','En el interior se conservan bien las consonantes; en la costa caribe se aspira o se pierde la /s/ final.']},
+ 'Argentina':{cab:['Argentina','España'],voc:[['auto','coche','coche'],['colectivo','autobús','autobús'],['pileta','piscina','piscina'],['laburo','trabajo','trabajo'],['che','oye','apelativo']],
+  ras:['Voseo pleno: vos tenés, vos sos, vení.','Sheísmo / zheísmo: ll e y como [ʃ] o [ʒ] (calle [ˈkaʃe]).','Entonación influida por la inmigración italiana.']},
+ 'Perú y Bolivia':{cab:['Andes','España'],voc:[['palta','aguacate','aguacate'],['choclo','mazorca','mazorca de maíz'],['chompa','jersey','suéter'],['cancha','campo','campo, terreno']],
+  ras:['Contacto con el quechua y el aimara (préstamos y rasgos de entonación).','Asibilación de la r en zonas andinas.','Voseo en algunas regiones de Bolivia.']},
+ 'Paraguay':{cab:['Paraguay','España'],voc:[['pororó','palomitas','palomitas de maíz'],['vení luego','ven (atenuado)','ven, por favor'],['karaí','señor','señor (guaraní)']],
+  ras:['Bilingüismo español–guaraní, ambos oficiales; la mezcla se llama jopara.','Partículas del guaraní en el español (luego, nomás, pa como atenuadores).','Voseo general.']},
+ 'Estados Unidos':{cab:['EE. UU.','Norma general'],voc:[['troca','camioneta','camioneta (truck)'],['parquear','aparcar / estacionar','aparcar'],['lonche','almuerzo','almuerzo (lunch)'],['llamar para atrás','devolver la llamada','devolver la llamada']],
+  ras:['Alternancia de códigos con el inglés (spanglish) y calcos.','Conviven variedades de base mexicana, caribeña y centroamericana.','La Academia Norteamericana de la Lengua Española forma parte de la ASALE.']},
+ 'Guinea Ecuatorial':{cab:['Lengua','Uso'],voc:[['español','administración, enseñanza'],['fang, bubi','lenguas propias de la población'],['francés','lengua oficial y de comunicación regional']],
+  ras:['Único país de África con el español como lengua oficial; tiene academia propia en la ASALE.','Contacto con lenguas bantúes y con el francés; la norma escolar se acerca a la peninsular.']},
+ 'Caribe':{cab:['Caribe','España'],voc:[['guagua','autobús','autobús'],['chévere','guay','estupendo'],['zafacón (P. Rico, R. Dom.)','papelera','papelera'],['china (P. Rico)','naranja','naranja']],
+  ras:['Aspiración o pérdida de /s/ final (los amigos [loh aˈmiɣoh]).','Lateralización de r final en Puerto Rico (puerta [ˈpwelta]).','Sujeto pronominal antepuesto en preguntas: ¿Qué tú quieres?']}
+}};

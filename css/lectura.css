@@ -1,0 +1,85 @@
+/* =========================================================================
+   MODO LECTURA (estilo Kindle): fondo, tipo de letra, tamaño, interlineado,
+   márgenes y alineación. Se aplica con atributos y variables en <html>.
+   ========================================================================= */
+:root{--rd-lh:1.6;--rd-zoom:1;--rd-width:1120px}
+/* tipografía de lectura */
+.theory p,.theory li,.doc p,.doc li,.gcard p,.gcard li,.sttext,.sttext p,.greetsub,.oe-card p,.oe-hero p,.dicintro,.blkd,.stbody p,.oe-dlg span{
+  font-family:var(--rd-font,var(--news))!important}
+.theory p,.theory li,.doc p,.doc li,.gcard p,.gcard li,.sttext,.sttext p,.greetsub,.oe-card p,.oe-hero p,.dicintro,.stbody p{line-height:var(--rd-lh)!important}
+.content{zoom:var(--rd-zoom);max-width:var(--rd-width)}
+html[data-align=justify] :is(.theory p,.doc p,.gcard p,.sttext p,.greetsub,.oe-card p,.oe-hero p,.dicintro){text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+
+/* fondos de papel (sobre el tema claro) */
+html[data-paper=crema]{--bg:#fbf7ee;--bg2:#f3ecdc;--card:#fffbf2;--card-solid:#fffbf2;--glass-side:#f6f0e2;--glass:rgba(251,247,238,.85);--glass-strong:rgba(255,251,242,.94);
+  --ink:#2b2620;--ink2:#4a4238;--ink3:#8a7f70;--line:rgba(60,45,25,.12);--line2:rgba(60,45,25,.06)}
+html[data-paper=sepia]{--bg:#f4ecd8;--bg2:#ebe0c6;--card:#f8f1e1;--card-solid:#f8f1e1;--glass-side:#eee4cc;--glass:rgba(244,236,216,.86);--glass-strong:rgba(248,241,225,.95);
+  --ink:#5b4636;--ink2:#6b5644;--ink3:#97826b;--line:rgba(91,70,54,.16);--line2:rgba(91,70,54,.08);--brand:#9a5b2a;--brand-soft:rgba(154,91,42,.12)}
+html[data-paper=verde]{--bg:#dfeadb;--bg2:#d2e0cd;--card:#e8f0e5;--card-solid:#e8f0e5;--glass-side:#d8e4d3;--glass:rgba(223,234,219,.86);--glass-strong:rgba(232,240,229,.95);
+  --ink:#1f2b1e;--ink2:#38463a;--ink3:#6c7d6a;--line:rgba(30,50,30,.14);--line2:rgba(30,50,30,.07);--brand:#2f6b45;--brand-soft:rgba(47,107,69,.12)}
+html[data-paper] .snav button.on{color:var(--bg)}
+
+/* botón y panel */
+.rd-btn b{font-family:var(--news);font-weight:700;font-size:1.02rem;letter-spacing:-.02em;line-height:1}
+.rd-btn b small{font-size:.72em}
+.rd-panel{position:fixed;z-index:200;top:62px;right:16px;width:320px;max-width:calc(100vw - 24px);max-height:calc(100vh - 80px);overflow:auto;
+  background:var(--glass-strong);-webkit-backdrop-filter:var(--blur);backdrop-filter:var(--blur);
+  border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);padding:16px 16px 14px;
+  opacity:0;transform:translate3d(0,-6px,0) scale(.98);transform-origin:top right;pointer-events:none;visibility:hidden;
+  transition:opacity .2s var(--ease),transform .24s var(--ease),visibility 0s linear .24s!important;transition-property:opacity,transform,visibility!important}
+.rd-panel.on{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition-delay:0s!important}
+.rd-panel h4{margin:0 0 12px;font-family:var(--news);font-size:1.15rem}
+.rd-row{margin:0 0 14px}
+.rd-row>span{display:block;font-family:var(--ui);font-size:.72rem;font-weight:600;color:var(--ink3);margin:0 0 6px;letter-spacing:.02em}
+.rd-seg{display:flex;gap:4px;padding:3px;border-radius:12px;background:var(--bg2);border:1px solid var(--line)}
+.rd-seg button{flex:1;border:none;background:none;border-radius:9px;padding:7px 4px;font:inherit;font-family:var(--ui);font-size:.8rem;color:var(--ink2);cursor:pointer}
+.rd-seg button.on{background:var(--card-solid);color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.10)}
+.rd-paper{display:flex;gap:10px}
+.rd-paper button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);cursor:pointer;display:grid;place-items:center;
+  font-family:var(--news);font-size:.95rem;font-weight:700;padding:0}
+.rd-paper button.on{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--brand)}
+.rd-paper small{display:block;font-family:var(--ui);font-size:.62rem;text-align:center;color:var(--ink3);margin-top:4px}
+.rd-paper div{display:flex;flex-direction:column;align-items:center}
+.rd-fonts button{font-size:.95rem}
+.rd-size{display:flex;align-items:center;gap:8px}
+.rd-size button{width:40px;height:34px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer;font-family:var(--news);font-weight:700}
+.rd-size input{flex:1;accent-color:var(--brand)}
+.rd-size output{font-family:var(--ui);font-size:.74rem;color:var(--ink3);min-width:36px;text-align:right}
+.rd-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.rd-foot button{border:1px solid var(--line);background:var(--bg2);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-family:var(--ui);font-size:.8rem;cursor:pointer}
+.rd-foot em{font-family:var(--news);font-size:.82rem;color:var(--ink3)}
+@media(max-width:640px){.rd-panel{top:58px;right:12px}.rd-btn span{display:none}}
+
+/* el selector de tema claro/oscuro vive ahora en el panel de lectura */
+#btnTheme{display:none!important}
+/* cinco tipos de letra: el selector admite dos filas en pantallas estrechas */
+.rd-fonts{flex-wrap:wrap}
+.rd-fonts button{flex:1 1 30%;min-width:0;font-size:.88rem;padding:7px 2px}
+/* la letra elegida alcanza toda la interfaz; los códigos IPA y el código siguen legibles */
+code,pre,kbd,samp{font-family:var(--code)}
+
+/* ---- superficies unificadas: barra lateral y barra superior del mismo color que el fondo,
+        sin textura; ambas flotan con esquinas redondeadas y se separan solo por un filete. ---- */
+:root,html[data-theme]{--noise:none}
+.side,html[data-theme] .side{background:var(--bg)!important}
+.topbar,html[data-theme] .topbar{background:var(--bg)!important;
+  margin:10px 10px 0;top:10px;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+html[data-theme=dark] .topbar{box-shadow:none}
+/* tapa la franja de 10 px sobre la barra superior para que el contenido no asome al desplazarse */
+.main::before{content:"";position:sticky;top:0;display:block;height:10px;margin-bottom:-10px;background:var(--bg);z-index:49}
+.app.sideopen .side{background:var(--bg)!important;-webkit-backdrop-filter:none;backdrop-filter:none}
+/* botón de menú (barra contraída o móvil): queda dentro de la barra superior redondeada */
+.sidetoggle{top:19px!important;left:19px!important;width:40px!important;height:40px!important;border-radius:12px!important;
+  background:var(--bg2)!important;border:1px solid var(--line)!important;box-shadow:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.app.sidehide .topbar{padding-left:66px}
+@media(max-width:1000px){.topbar{padding-left:62px!important}}
+@media(max-width:640px){.topbar{margin:8px 8px 0;top:8px;gap:8px}.sidetoggle{top:16px!important;left:16px!important}}
+/* cajón abierto en pantalla estrecha: siempre visible aunque venga «contraído» del escritorio,
+   por encima del velo, y sin el botón ☰ montado sobre el logotipo */
+@media(max-width:1000px){
+  .app.sideopen .side,.app.sidehide.sideopen .side{margin-left:0!important;opacity:1!important;visibility:visible!important;
+    pointer-events:auto!important;transform:none!important;z-index:90}
+  .app.sideopen .sidetoggle{opacity:0!important;pointer-events:none!important}
+  .app.sideopen .scrim{z-index:85}
+  .sidecol{display:grid!important}
+}

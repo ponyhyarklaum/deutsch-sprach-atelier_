@@ -1,0 +1,6 @@
+{
+  "name": "deutsch-atelier-tools",
+  "private": true,
+  "description": "Herramientas opcionales de compilación: terser minifica el JavaScript incrustado (python tools/build.py lo detecta en tools/node_modules).",
+  "devDependencies": { "terser": "5.31.6" }
+}
