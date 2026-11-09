@@ -15,7 +15,7 @@ const LEGAL={
   proyecto:'Deutsch · Atelier',
   pais:'Colombia',
   contacto:'',              /* correo o formulario de contacto del titular; si queda vacío se remite al repositorio */
-  repositorio:'',           /* URL pública del repositorio, si existe */
+  repositorio:'https://github.com/ponyhyarklaum/deutsch-sprach-atelier_',           /* URL pública del repositorio, si existe */
   anio:2026,
   actualizado:'8 de noviembre de 2026'
 };

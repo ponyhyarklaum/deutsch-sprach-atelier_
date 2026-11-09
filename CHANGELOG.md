@@ -1,5 +1,10 @@
 # Changelog
 
+## [6.4.2] — 2026-11-09
+### Cambiado
+- Repositorio público enlazado en el aviso legal y en el README (insignias, descargas).
+- Integración continua: instala terser para compilar minificado, se puede lanzar a mano y publica releases con etiquetas `v*`; Dependabot mantiene las acciones al día.
+
 ## [6.4.1] — 2026-11-09
 ### Añadido
 - `LICENSE` (todos los derechos reservados) y `THIRD_PARTY_NOTICES.md` (tipografías OFL, Lucide ISC, dominio público).

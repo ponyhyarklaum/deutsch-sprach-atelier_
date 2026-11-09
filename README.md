@@ -1,5 +1,12 @@
 # Deutsch · Atelier
 
+[![build](https://github.com/ponyhyarklaum/deutsch-sprach-atelier_/actions/workflows/build.yml/badge.svg)](https://github.com/ponyhyarklaum/deutsch-sprach-atelier_/actions/workflows/build.yml)
+[![Licencia: todos los derechos reservados](https://img.shields.io/badge/licencia-todos%20los%20derechos%20reservados-lightgrey)](LICENSE)
+
+> **Descargar:** la página (`deutsch-atelier.html`) y el paquete SCORM 1.2 (`deutsch-atelier-scorm12.zip`) están en
+> [Releases](https://github.com/ponyhyarklaum/deutsch-sprach-atelier_/releases) o, tras cada cambio, en
+> [Actions](https://github.com/ponyhyarklaum/deutsch-sprach-atelier_/actions) → última ejecución → *Artifacts*.
+
 Aula interactiva y gratuita de **alemán, inglés, francés y español** (A1 – C2). Tres botones flotantes en la esquina:
 el **gorro** cambia de enfoque, el **cerebro** cambia la lengua de estudio y el **bombillo** ofrece ayuda:
 

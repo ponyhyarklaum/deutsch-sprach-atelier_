@@ -1,0 +1,17 @@
+# salidas compiladas (se publican en GitHub Releases)
+dist/
+
+# herramientas de compilación opcionales
+node_modules/
+
+# carpeta de borradores de OneDrive / Claude
+Claude outputs/
+
+# sistema / editores
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+__pycache__/
+*.pyc
