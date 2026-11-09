@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.4.1] — 2026-11-09
+### Añadido
+- `LICENSE` (todos los derechos reservados) y `THIRD_PARTY_NOTICES.md` (tipografías OFL, Lucide ISC, dominio público).
+
 ## [6.4.0] — 2026-11-09
 ### Añadido
 - **«Al azar» en las cuatro lenguas** (`modules/azar.js`): en inglés, francés y español abre una ficha de palabra

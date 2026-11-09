@@ -1,0 +1,51 @@
+Copyright (c) 2026 Juan Fernando Martínez Cristancho. Todos los derechos reservados.
+All rights reserved.
+
+Deutsch · Atelier (código fuente, textos, explicaciones, ejercicios, cuestionarios,
+relatos, adaptaciones de lecturas, fichas, diseño e imágenes propias).
+
+ESPAÑOL
+
+1. Este repositorio y su contenido son propiedad de su autor. Se publica para que pueda
+   consultarse; publicarlo no concede ninguna licencia de uso.
+
+2. Sin autorización previa y por escrito del titular NO se permite copiar, reproducir,
+   modificar, traducir, adaptar, distribuir, publicar, sublicenciar, vender ni explotar
+   comercialmente, total o parcialmente, el código ni los contenidos, ni crear obras
+   derivadas a partir de ellos.
+
+3. Usos permitidos sin necesidad de permiso:
+   a) consultar el repositorio y el sitio publicado;
+   b) usar la aplicación como estudiante o docente a través del sitio publicado por el
+      titular o del paquete SCORM que el titular haya facilitado a una institución;
+   c) citar fragmentos breves con fines de reseña, crítica o investigación, indicando la
+      autoría y la fuente, en los términos que permita la legislación aplicable;
+   d) las acciones técnicas que la plataforma de alojamiento (GitHub) permite a sus usuarios
+      según sus condiciones de servicio, como ver el código o crear una bifurcación (fork)
+      dentro de la propia plataforma, sin que ello autorice ningún otro uso.
+
+4. Para solicitar permisos (uso institucional, adaptación, traducción, colaboración):
+   escribir al titular a través del contacto indicado en el aviso legal del sitio.
+
+5. EL SOFTWARE Y LOS CONTENIDOS SE OFRECEN «TAL CUAL», SIN GARANTÍA DE NINGÚN TIPO.
+   El titular no responde de daños derivados de su uso. La información sobre exámenes
+   oficiales, horas de estudio y normas es orientativa; prevalece la de cada institución.
+
+ENGLISH (summary)
+
+This repository and its contents are the property of the author. No licence is granted
+by its publication. Copying, modification, redistribution, publication, sublicensing or
+commercial use, in whole or in part, requires prior written permission from the copyright
+holder. Viewing, using the published site or an authorised SCORM package, short quotations
+with attribution where permitted by law, and the actions GitHub's Terms of Service allow
+(viewing and forking within GitHub) are permitted. Provided "as is", without warranty.
+
+COMPONENTES DE TERCEROS / THIRD-PARTY COMPONENTS
+
+Los siguientes componentes conservan su propia licencia y no están cubiertos por esta
+reserva de derechos. Véase THIRD_PARTY_NOTICES.md.
+  - Tipografías: Inter, Tinos, UnifrakturMaguntia, IM Fell English, Cormorant Garamond,
+    Ibarra Real Nova (SIL Open Font License 1.1).
+  - Icono «brain»: Lucide (licencia ISC).
+  - Textos de dominio público citados en «Lectura crítica» (C1–C2).
+  - Marcas, nombres y enlaces de instituciones y medios externos pertenecen a sus titulares.

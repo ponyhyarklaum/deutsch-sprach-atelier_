@@ -81,7 +81,7 @@ deutsch-atelier/
 │   ├── interfaz.js         Idioma de la interfaz (ES · DE · EN · FR), dentro del panel «Aa»
 │   └── bombillo.js         «El Bombillo»: ayuda rápida con estrategias basadas en la investigación
 ├── media/
-│   ├── fonts/              Inter, Tinos, UnifrakturMaguntia (licencia OFL)
+│   ├── fonts/              Inter, Tinos, UnifrakturMaguntia, IM Fell, Cormorant, Ibarra (OFL)
 │   └── images/             Sello, favicon
 ├── scorm/
 │   └── imsmanifest.xml     Manifiesto SCORM 1.2
@@ -152,5 +152,8 @@ libre y gratuito; la reproducción, redistribución o adaptación del contenido 
 autorización del titular. Los textos completos están en el pie de la página (Aviso legal, Derechos de autor,
 Privacidad y cookies) y se editan en `modules/legal.js` (objeto `LEGAL`: titular, país, contacto, repositorio).
 
-Tipografías de terceros bajo SIL Open Font License: Inter, Tinos, UnifrakturMaguntia.
+## Licencia
+**Todos los derechos reservados** (véase [`LICENSE`](LICENSE)). El repositorio puede consultarse, pero copiar, modificar, redistribuir o usar comercialmente el código o los
+contenidos requiere permiso escrito del autor. Los componentes de terceros (tipografías OFL, icono de Lucide
+con licencia ISC, textos de dominio público) conservan su licencia: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 Los recursos externos enlazados (DW, ORF, SRF, Sprachportal, Österreich Institut, fide, grammis, etc.) pertenecen a sus autores.
